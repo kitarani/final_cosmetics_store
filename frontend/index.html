@@ -2,75 +2,480 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors/color_1.css">
+
     <title>Cosmetic Store</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Cosmetic Store</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <i class="bx bxs-shopping-bags nav__logo-icon"></i>cosmetic store
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="cart.html" class="nav__link">Cart</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link">FAQ's</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <div class="login__toggle" id="login-button">
+                    <i class="bx bx-user"></i>
+                </div>
+
+                <div class="nav__shop" id="cart-shop">
+                    <i class="bx bx-shopping-bag"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+
+            </div>
         </nav>
     </header>
+
+    <!--=============== CART ===============-->
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart-close"></i>
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart_box">
+                    <img src="assets/img/cart_1.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Dr. Althea Relief cream 345</h3>
+                    <span class="cart_price">8000 KZT</span>
+                </div>
+
+                <div class="cart__amount">
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box">
+                            <i class="bx bx-minus"></i>
+                        </span>
+
+                        <span class="cart__amount-number">1</span>
+
+                        <span class="cart__amount-box">
+                            <i class="bx bx-plus"></i>
+                        </span>
+                    </div>
+
+                    <i class="bx bx-trash-alt cart__amount-trash"></i>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart_box">
+                    <img src="assets/img/cart_2.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Dr. Jart+ Cicapair Tiger Grass</h3>
+                    <span class="cart_price">9990 KZT</span>
+                </div>
+
+                <div class="cart__amount">
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box">
+                            <i class="bx bx-minus"></i>
+                        </span>
+
+                        <span class="cart__amount-number">1</span>
+
+                        <span class="cart__amount-box">
+                            <i class="bx bx-plus"></i>
+                        </span>
+                    </div>
+
+                    <i class="bx bx-trash-alt cart__amount-trash"></i>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart_box">
+                    <img src="assets/img/cart_3.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Skin1004 Ampoule</h3>
+                    <span class="cart_price">7590 KZT</span>
+                </div>
+
+                <div class="cart__amount">
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box">
+                            <i class="bx bx-minus"></i>
+                        </span>
+
+                        <span class="cart__amount-number">1</span>
+
+                        <span class="cart__amount-box">
+                            <i class="bx bx-plus"></i>
+                        </span>
+                    </div>
+
+                    <i class="bx bx-trash-alt cart__amount-trash"></i>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cart__prices">
+            <span class="cart__prices-item">3 item</span>
+            <span class="cart__prices-total">25,580 KZT</span>
+        </div>
+    </div>
+
     
-    <section class="hero">
-        <h1>Welcome to Your Beauty Destination</h1>
-        <p>Discover high-quality cosmetics for every style.</p>
-        <a href="products.html" class="btn">Shop Now</a>
-    </section>
-    
-    <section class="featured-products">
-        <h2>Featured Products</h2>
-        <div class="product-list">
-            <div class="product">
-                <img src="images/product1.jpg" alt="Lipstick">
-                <h3>Luxury Lipstick</h3>
-                <p>$15.99</p>
-                <a href="product-details.html" class="btn">View Details</a>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login" id="login">
+        <i class="bx bx-x login__close" id="login-close"></i>
+
+        <h2 class="login__title-center">Login</h2>
+
+        <form action="" class="login__form grid">
+            <div class="login__content">
+                <label for="" class="login__label">Email</label>
+                <input type="email" class="login__input">
             </div>
-            <div class="product">
-                <img src="images/product2.jpg" alt="Foundation">
-                <h3>Matte Foundation</h3>
-                <p>$22.50</p>
-                <a href="product-details.html" class="btn">View Details</a>
+
+            <div class="login__content">
+                <label for="" class="login__label">Password</label>
+                <input type="password" class="login__input">
             </div>
-            <div class="product">
-                <img src="images/product3.jpg" alt="Eyeshadow Palette">
-                <h3>Eyeshadow Palette</h3>
-                <p>$29.99</p>
-                <a href="product-details.html" class="btn">View Details</a>
+
+            <div>
+                <a href="#" class="button">Sign In</a>
+            </div>
+
+            <div>
+                <p class="signup">Not a member? <a href="register.html">Sign Up now</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home container">
+            <div class="swiper home-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Home Swiper 1-->
+                     <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/cart_1.jpg" alt="">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Relief cream "345"</h4>
+                                    <span class="home_details-subtitle">Vegan</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1 Trending Item</h3>
+                                <h1 class="home__title">ORIGINAL <br> IS NEVER <br> FINISHED!!</h1>
+                                <p class="home__description">Restoring cream with niacinamide 345 Relief Cream is an innovative skin care product for post-acne skin.</p>
+
+                                <div class="home__buttons">
+                                    <a href="details.html" class="button">Buy Now</a>
+                                    <a href="details.html" class="button--link button--flex">View Details <i class="bx bx-right-arrow-alt button-icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                     </section>
+
+                     <!--Home Swiper 2-->
+                     <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/cart_2.jpg" alt="">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Cicapair Tiger Grass</h4>
+                                    <span class="home_details-subtitle">Dr. Jart+</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#2 top of Bestseller</h3>
+                                <h1 class="home__title">GLOW AND <br> BARIER <br> REPAIR!!</h1>
+                                <p class="home__description">Masks pigment spots, reduces redness and irritation, returning the skin to a healthy, natural appearance.</p>
+
+                                <div class="home__buttons">
+                                    <a href="details.html" class="button">Buy Now</a>
+                                    <a href="details.html" class="button--link button--flex">View Details <i class="bx bx-right-arrow-alt button-icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                     </section>
+
+                     <!--Home Swiper 3-->
+                     <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/img/cart_3.jpg" alt="">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Madagascar Centella Ampoule</h4>
+                                    <span class="home_details-subtitle">Skin1004</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#3 TRENDING ITEM</h3>
+                                <h1 class="home__title">100% <br> CENTELLA <br> EXTRACTS!!</h1>
+                                <p class="home__description">This serum contains a high concentration of Centella Asiatica extract, which is known for its soothing and restorative properties.</p>
+
+                                <div class="home__buttons">
+                                    <a href="details.html" class="button">Buy Now</a>
+                                    <a href="details.html" class="button--link button--flex">View Details <i class="bx bx-right-arrow-alt button-icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                     </section>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--=============== DISCOUNT ===============-->
+        <section class="discount section">
+            <div class="discount__container container grid">
+                <img src="assets/img/cart_1.jpg" alt="" class="discount__img">
+
+                <div class="discount__data">
+                    <h2 class="discount__title">50% Discount <br> On New Products</h2>
+                    <a href="#" class="button">Go to new</a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== NEW ARRIVALS ===============-->
+        <section class="new section">
+            <h2 class="section__title">New Arrivals</h2>
+
+            <div class="new__container container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <!--New Content 1-->
+                        <div class="new__content swiper-slide">
+                            <div class="new__tag">New</div>
+                            <img src="assets/img/cart_2.jpg" alt="" class="new__img">
+                            <h3 class="new__title">Dr. Jart+ Cicapair Tiger Grass</h3>
+                            <span class="new__subtitle">Corrector Cream</span>
+
+                            <div class="new__prices">
+                                <span class="new__price">6590 KZT</span>
+                                <span class="new__discount">7590 KZT</span>
+                            </div>
+
+                            <a href="details.html" class="button new__button">
+                                <i class="bx bx-cart-alt new__icon"></i>
+                            </a>
+                        </div>
+
+                        <!--New Content 2-->
+                        <div class="new__content swiper-slide">
+                            <div class="new__tag">New</div>
+                            <img src="assets/img/cart_3.jpg" alt="" class="new__img">
+                            <h3 class="new__title">Skin1004 Centella Madagascar Ampoule</h3>
+                            <span class="new__subtitle">Ampoule</span>
+
+                            <div class="new__prices">
+                                <span class="new__price">7790 KZT</span>
+                                <span class="new__discount">9990 KZT</span>
+                            </div>
+
+                            <a href="details.html" class="button new__button">
+                                <i class="bx bx-cart-alt new__icon"></i>
+                            </a>
+                        </div>
+
+                        <!--New Content 3-->
+                        <div class="new__content swiper-slide">
+                            <div class="new__tag">New</div>
+                            <img src="assets/img/cart_1.jpg" alt="" class="new__img">
+                            <h3 class="new__title">Dr. Althea Relief Cream "345"</h3>
+                            <span class="new__subtitle">Cream</span>
+
+                            <div class="new__prices">
+                                <span class="new__price">4000 KZT</span>
+                                <span class="new__discount">8000 KZT</span>
+                            </div>
+
+                            <a href="details.html" class="button new__button">
+                                <i class="bx bx-cart-alt new__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== STEPS ===============-->
+        <section class="steps section container">
+            <div class="steps__bg">
+                <h2 class="section__title">How to order products <br> from our store</h2>
+
+                <div class="steps__container grid">
+                    <!--Step card 1-->
+                    <div class="steps__card">
+                        <div class="steps__card-number">01</div>
+                        <h3 class="steps__card-title">Choose Products</h3>
+                        <p class="steps__card-description">
+                            We have several varieties products you can choose from.
+                        </p>
+                    </div>
+
+                    <!--Step card 2-->
+                    <div class="steps__card">
+                        <div class="steps__card-number">02</div>
+                        <h3 class="steps__card-title">Place in order</h3>
+                        <p class="steps__card-description">
+                            Once your order is set, we move to the next step which is the shipping.
+                        </p>
+                    </div>
+
+                    <!--Step card 3-->
+                    <div class="steps__card">
+                        <div class="steps__card-number">03</div>
+                        <h3 class="steps__card-title">Get order delivered</h3>
+                        <p class="steps__card-description">
+                            Our delivery process is easy, you receive the order direct to your home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== NEWSLETTER ===============-->
+        <section class="newsletter section">
+            <div class="newsletter__container container">
+                <h2 class="section__title">Our Newsletter</h2>
+                <p class="newsletter__description">
+                    Promotion new products and sales. Directly to your inbox
+                </p>
+
+                <form action="" class="newsletter__form">
+                    <input type="text" placeholder="Enter your email" class="newsletter__input">
+                    <button class="button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <!--Footer Content 1-->
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="bx bxs-shopping-bags footer__logo-icon"></i> cosmetic store
+                </a>
+
+                <p class="footer__description">Enjoy the biggest sale <br> of your life. </p>
+
+                <ul class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="footer__social-link"><i class="bx bxl-instagram-alt"></i></a>
+                    <a href="#" class="footer__social-link"><i class="bx bxl-twitter"></i></a>
+                </ul>
+            </div>
+
+            <!--Footer Content 2-->
+            <div class="footer__content">
+                <h3 class="footer__title">About</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">About Us</a></li>
+                    <li><a href="#" class="footer__link">Customer Support</a></li>
+                    <li><a href="#" class="footer__link">Support Center</a></li>
+                </ul>
+            </div>
+
+            <!--Footer Content 3-->
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Shop</a></li>
+                    <li><a href="#" class="footer__link">Discounts</a></li>
+                    <li><a href="#" class="footer__link">Shipping mode</a></li>
+                </ul>
+            </div>
+
+            <!--Footer Content 4-->
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Register</a></li>
+                    <li><a href="#" class="footer__link">Contact Us</a></li>
+                    <li><a href="#" class="footer__link">About Us</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-    
-    <section class="reviews">
-        <h2>Customer Reviews</h2>
-        <div class="review-list">
-            <div class="review">
-                <p>"Amazing products! The lipstick quality is outstanding."</p>
-                <span>- Sarah J.</span>
-            </div>
-            <div class="review">
-                <p>"Fast delivery and great customer service. Will order again!"</p>
-                <span>- Emily R.</span>
-            </div>
-            <div class="review">
-                <p>"Love the foundation! It blends perfectly with my skin tone."</p>
-                <span>- Jessica M.</span>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Cosmetic Store. All Rights Reserved.</p>
+        <spn class="footer__copy">&#169; Cosmetic Store. All rights reserved</spn>
     </footer>
-    
-    <script src="js/script.js"></script>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+    <!--=============== STYLE SWITCHER ===============-->
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== JS ===============-->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
