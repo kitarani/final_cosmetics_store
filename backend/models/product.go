@@ -8,6 +8,6 @@ type Product struct {
 	Description string   `json:"description"`
 	Price       string   `json:"price" gorm:"not null"`
 	CategoryID  *uint    `json:"category_id"`
-	Category    Category `json:"category" `
+	Category    Category `json:"category" gorm:"foreignKey:CategoryID"`
 	ImageURL    string   `json:"image_url"`
 }
